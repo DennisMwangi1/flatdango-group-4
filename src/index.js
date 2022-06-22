@@ -36,6 +36,16 @@ document.addEventListener('DOMContentLoaded',()=>{
                 showTime.innerText = film.showtime
                 ticketNum.innerText =film.tickets_sold
                 let tickets = film.tickets_sold
+                buyBtn.addEventListener('click',(e)=>{
+                    e.preventDefault()
+                    tickets --
+                    ticketNum.innerText = tickets
+                    if (tickets === 0 ) {
+                        buyBtn.disabled = 'true'
+                        buyBtn.textContent = 'SOLD OUT'
+                        
+                    }
+                })
 
 
             })
