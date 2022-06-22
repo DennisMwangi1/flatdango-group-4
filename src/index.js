@@ -24,6 +24,13 @@ document.addEventListener('DOMContentLoaded',()=>{
             filmList.innerText = film.title
             filmList.classList.add("film")
             movieTitles.appendChild(filmList)
+            filmList.id = film.id
+            filmList.style.cursor = 'pointer'
+
+            filmList.addEventListener('click',(e)=>{
+                e.preventDefault()
+            })
+
         });
     })
 
