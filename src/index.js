@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded',()=>{
-console.log ("hello")
+document.addEventListener("DOMContentLoaded", () => {
+    fetchData();
+  });
 
 
 
