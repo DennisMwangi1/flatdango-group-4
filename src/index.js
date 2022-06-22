@@ -29,6 +29,15 @@ document.addEventListener('DOMContentLoaded',()=>{
 
             filmList.addEventListener('click',(e)=>{
                 e.preventDefault()
+                moviePoster.src = film.poster
+                movieTitle.innerText = film.title
+                runTime.innerText = `${film.runtime} minutes`
+                movieInfo.innerText = film.description
+                showTime.innerText = film.showtime
+                ticketNum.innerText =film.tickets_sold
+                let tickets = film.tickets_sold
+
+
             })
 
         });
