@@ -18,6 +18,13 @@ document.addEventListener('DOMContentLoaded',()=>{
         showTime.innerText = data[0].showtime
         ticketNum.innerText =data[0].tickets_sold
         let tickets = data[0].tickets_sold
+
+        data.forEach(film=> {
+            const filmList = document.createElement('li')
+            filmList.innerText = film.title
+            filmList.classList.add("film")
+            movieTitles.appendChild(filmList)
+        });
     })
 
 
